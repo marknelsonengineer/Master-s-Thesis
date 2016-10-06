@@ -1,0 +1,270 @@
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+%!NOTE: This example file has been prepared according to the University of
+%!      Hawaii Style & Policy Manual for Theses and Dissertations dated
+%!      "Revised September 2010". If you have one with a later date, you may
+%!      need to make revisions to this document as well. In any event, making
+%!      sure your thesis complies with Graduate Education guidelines is
+%!      ultimately your responsibility. Caveat LaTeXtor. :)
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+%% The options are (you can only choose one from each group):
+%%
+%% 10pt, 11pt, 12pt: chooses the point size for the document. "11pt" is the
+%%                   default.
+%%
+%% oneside, twoside: whether you want your document onesided or twosided. Note
+%%                   that twosided is not guaranteed to work, and style
+%%                   guidelines prohibit double sided printouts on final
+%%                   copy. "oneside" is the default.
+%%
+%% draft, final: when printing drafts you can save a lot of paper by using the
+%%               "draft" option. It switches to single spacing, displays overful
+%%               hboxes with a black box, prints a version number on title page 
+%%               and omits signature page. Of course for the final copy make
+%%               sure to use the "final" option! "final" is the default.
+%%
+%% thesis, dissertation: switches between the style for a master's thesis and a 
+%%                       Ph.D. dissertation. The differences are fairly minor
+%%                       and limited to the front matter. "thesis" is the
+%%                       default.
+%%
+%% actual, proposal: switches between actual document and proposal mode. In
+%%                   proposal mode: the title page is simplified and the
+%%                   version number is always printed.
+%%
+%%% Load the new uhthesis document class
+\documentclass[11pt]{../uhthesis}
+
+
+%%% Load some useful packages:
+%%
+%% New LaTeX2e graphics support
+\usepackage{graphicx}
+%% Package to linebreak URLs in a sane manner.
+\usepackage{url}
+%%
+
+%% Package to linebreak URLs in a sane manner.
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+
+%% Package to scale a large table to pagewidth
+\usepackage{adjustbox}
+
+
+%\usepackage{color}
+%\usepackage[dvipsnames]{xcolor}
+%\usepackage{algorithm}
+%\usepackage{algpseudocode}
+%\usepackage{amsmath}
+%\usepackage[makeroom]{cancel}
+%\usepackage{pgfplots}
+
+
+%%% Declarations for Front Matter. Capitalize all of these values
+%%% "normally". This allows the document class to format them properly.
+%% Full title of thesis or dissertation, capitalized like a title should be.
+\title{Untitled Thesis}%% Your name, capitalized normally. Do not include any titles like Dr.
+\author{Mark Nelson}
+%% Month in which you intend to receive your degree (i.e. graduation).
+%% Presumably this will be one of: May, August, or December.
+\degreemonth{December}
+%% Year of expected graduation.
+\degreeyear{2016}
+%% Type of degree to be conferred.
+\degree{Master of Science}
+%% This is the chairperson of your committee. Do not use titles like Dr.
+\chair{Peter-Michael Seidel}
+%% The other members of your committee, seperated by "\\". Again, no titles,
+%% and it is customary to list the outside committee member (if you have one)
+%% last.
+\othermembers{Dusco Pavlovic\\
+Yingfei Dong}
+%% The field in which you are obtaining your degree, capitalized normally.
+\field{Computer Science}
+%% If your discipline allows subfields, you can add it here. Note that this
+%% is strictly controlled, so consult the Style & Policy guide before adding
+%% a subfield.
+%\subfield{Cyber Warfare}
+%% 4-6 optional keywords/phrases for use in indexing or as search terms
+\keywords{Thesis, Actor Networks, Secure Boot}
+%% The version number of your document. Consistent use of this will enable you
+%% to tell old drafts from new ones. Final actual documents omit this
+%% automatically so you can use it without fear of submission problems at the
+%% end. If you do not define this parameter, it defaults to "1.0.0".
+\versionnum{0.0.0}
+
+%%% End of preamble
+\begin{document}
+\maketitle
+
+\begin{frontmatter}
+
+%%% Note, there is no longer a signature page included in the document, it
+%%% has been replaced by Form IV
+
+%%% Create the copyright page (optional)
+\copyrightpage
+
+\begin{dedication}
+\null\vfil
+{\large
+\begin{center}
+Dedicated to: \\\vspace{12pt}
+Richard Leland Anshutz, 1930 -- 2013\\\vspace{12pt}
+
+One hundred years from now, \\
+It won't matter what car I drove, \\
+What kind of house I lived in, \\
+How much I had in my bank account, \\
+Nor what my clothes looked like, \\
+But, the world may be a little better \\
+Because I was important in the life of a child. \\
+
+\end{center}}
+\vfil\null
+\end{dedication}
+
+
+\begin{acknowledgments}
+I would like to thank my wife, Elizabeth, for enduring hours of `looking at the back of my head.'  This paper would not have been possible without her loving support.  \\
+\\
+I would also like to thank my parents.  I have rediscovered my family these last few years and I miss our time together.  \\
+\\
+Finally, I would like to thank my son, Sam.  For teaching me patience and forgiveness.
+
+
+\end{acknowledgments}
+
+
+
+
+%%% Bring in the abstract section from external file
+\begin{abstract}
+
+This is a working abstract and will be finalized when the bulk of the writing has been finished.
+
+Formal verification of cyber-physical systems is challenging because of the complexity of real-world elements interacting with their abstract, data-encoded analogues required for computation.  Several modeling techniques have been introduced... CITE.
+
+This paper extends the concept of Actor Network Procedural Modeling introduced in \cite{ANTs:2011}.
+
+The paper will use ANTs and PDL to model the secure boot process, openflow networking and hardware anti-trojan verification.  All of these processes have cyber-physical elements with strong security requirements.
+
+
+\end{abstract}
+
+
+%%% Generate table of contents
+\tableofcontents
+
+
+%%% Generate list of tables
+\listoftables
+
+
+%%% Generate list of figures
+\listoffigures
+
+\end{frontmatter}
+
+
+\chapter{Introduction}
+
+Make a problem statement and defend it.
+
+Introduce the problem we are trying to solve.
+
+Talk about the benefits and objectives of this research.
+
+Write a summary of the overall approach 
+
+CONCLUDE WITH AN OUTLINE OF THE PAPER 
+
+
+\chapter{Literature Review}
+
+Lorem ipsum.
+
+
+\chapter{Methodology}
+
+In this chapter, I want to talk about 1) The history of ANTs, 2) Dr. Pavlovic/Meadow's reinterpretation of ANTs 3) the ANT modeling technique I'll use for this thesis.
+
+
+\chapter{Modeling the Secure Boot Process}
+
+Lorem ipsum.
+
+
+\chapter{Modeling OpenFlow Network Configuration}
+
+Lorem ipsum.
+
+
+\chapter{Modeling the Detection of Hardware Trojans}
+
+Lorem ipsum.
+
+
+\chapter{Conclusions}
+
+Statement of my results
+
+\section{Future Research}
+
+Lorem ipsum
+
+
+
+
+
+
+%%% Switch to appendix mode
+\appendix
+
+\chapter{Glossary}
+
+%% A floating table. Note that the caption occurs _before_ the table, unlike 
+%% a figure where it appears after!
+%%
+%% The "[htbp]" allows the table to be placed: here, top of page, bottom of
+%% page or on a seperate floats page, whatever works best.
+\begin{table}[htbp]
+  %% If you have a really long caption, you can enclose a short version for the
+  %% the List of Tables in "[]", and the full caption in "{}" as we do here
+  \caption[Acronym List.]{Acronyms used in this paper.}
+
+  \label{tab:glossary}
+  \begin{center}
+    \begin{tabular}{|l|r|}
+      \hline
+      \textbf{Acronym} & \textbf{Definition} \\
+      \hline
+      AV & Anti-Virus \\ \hline
+      CC & Credit Card \\ \hline
+      CDR & Call Detail Records \\ \hline
+      FBI & U.S. Federal Bureau of Investigation \\ \hline
+      IP & Intellectual Property \\ \hline
+      IPO & Initial Public Offering \\ \hline
+      IRS & U.S. Internal Revenue Service \\ \hline
+      NPV & Net Present Value \\ \hline
+      OPM & U.S. Office of Personnel Management \\ \hline
+      PII & Personally Identifiable Information \\ \hline
+      SEC & U.S. Securities and Exchange Commission \\ \hline
+      SPE & Sony Pictures Entertainment \\ \hline
+    \end{tabular}
+  \end{center}
+\end{table}
+
+
+
+%% Include all entries from bib file
+\nocite{*}
+
+%%% Input file for bibliography
+\bibliography{Thesis-Nelson}
+
+%% Custom bibliography style
+\bibliographystyle{marknelson}
+
+
+\end{document}
